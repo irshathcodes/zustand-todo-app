@@ -1,1 +1,1 @@
-Just a simple todo App created to play around with state management library Zustand.
+Just a simple todo App created to play around with Zustand the state management library.
