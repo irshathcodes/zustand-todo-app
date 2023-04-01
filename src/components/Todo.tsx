@@ -6,7 +6,7 @@ export default function Todo(todo: Todo) {
 	const deleteTodo = useTodoStore((state) => state.deleteTodo);
 
 	return (
-		<li className="flex gap-2 bg-slate-200 py-2 px-3 rounded-md">
+		<li className="flex gap-2 bg-slate-200 py-2 group px-3 rounded-md">
 			<div
 				className={`transition-all duration-300 ${
 					todo.completed ? 'opacity-100' : 'opacity-0'
@@ -26,7 +26,7 @@ export default function Todo(todo: Todo) {
 				</button>
 			</div>
 
-			<div>
+			<div className="transition-opacity duration-300 opacity-0 group-hover:opacity-100">
 				<button onClick={() => deleteTodo(todo.id)}>❌</button>
 			</div>
 		</li>
